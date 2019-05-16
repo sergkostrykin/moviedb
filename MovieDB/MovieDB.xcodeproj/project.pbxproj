@@ -9,10 +9,15 @@
 /* Begin PBXBuildFile section */
 		5C94F50F228DA33A00FAE07A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94F50E228DA33A00FAE07A /* AppDelegate.swift */; };
 		5C94F511228DA33A00FAE07A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94F510228DA33A00FAE07A /* ViewController.swift */; };
-		5C94F514228DA33A00FAE07A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C94F512228DA33A00FAE07A /* Main.storyboard */; };
 		5C94F517228DA33A00FAE07A /* MovieDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C94F515228DA33A00FAE07A /* MovieDB.xcdatamodeld */; };
 		5C94F519228DA33C00FAE07A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C94F518228DA33C00FAE07A /* Assets.xcassets */; };
 		5C94F51C228DA33C00FAE07A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C94F51A228DA33C00FAE07A /* LaunchScreen.storyboard */; };
+		5C94F52E228DA61B00FAE07A /* MovieList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C94F529228DA61B00FAE07A /* MovieList.storyboard */; };
+		5C94F52F228DA61B00FAE07A /* MovieListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94F52A228DA61B00FAE07A /* MovieListPresenter.swift */; };
+		5C94F530228DA61B00FAE07A /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94F52B228DA61B00FAE07A /* MovieListViewController.swift */; };
+		5C94F531228DA61B00FAE07A /* MovieListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94F52C228DA61B00FAE07A /* MovieListScreen.swift */; };
+		5C94F532228DA61B00FAE07A /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94F52D228DA61B00FAE07A /* MovieListView.swift */; };
+		5C94F534228DA6BF00FAE07A /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94F533228DA6BF00FAE07A /* AppRouter.swift */; };
 		7E8160732B82130541F7822C /* Pods_MovieDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF5F6F0069BBC5F72B581C3 /* Pods_MovieDB.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,11 +27,16 @@
 		5C94F50B228DA33A00FAE07A /* MovieDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C94F50E228DA33A00FAE07A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C94F510228DA33A00FAE07A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5C94F513228DA33A00FAE07A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C94F516228DA33A00FAE07A /* MovieDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MovieDB.xcdatamodel; sourceTree = "<group>"; };
 		5C94F518228DA33C00FAE07A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C94F51B228DA33C00FAE07A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C94F51D228DA33C00FAE07A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C94F529228DA61B00FAE07A /* MovieList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MovieList.storyboard; sourceTree = "<group>"; };
+		5C94F52A228DA61B00FAE07A /* MovieListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListPresenter.swift; sourceTree = "<group>"; };
+		5C94F52B228DA61B00FAE07A /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
+		5C94F52C228DA61B00FAE07A /* MovieListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListScreen.swift; sourceTree = "<group>"; };
+		5C94F52D228DA61B00FAE07A /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
+		5C94F533228DA6BF00FAE07A /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		E0EC1FBD4EE0A78709015A2A /* Pods-MovieDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDB.release.xcconfig"; path = "Target Support Files/Pods-MovieDB/Pods-MovieDB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				5C94F50E228DA33A00FAE07A /* AppDelegate.swift */,
+				5C94F533228DA6BF00FAE07A /* AppRouter.swift */,
 				5C94F524228DA48E00FAE07A /* Modules */,
 				5C94F523228DA48800FAE07A /* Shared */,
 				5C94F526228DA4AD00FAE07A /* SupportingFiles */,
@@ -100,6 +111,11 @@
 		5C94F524228DA48E00FAE07A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5C94F529228DA61B00FAE07A /* MovieList.storyboard */,
+				5C94F52A228DA61B00FAE07A /* MovieListPresenter.swift */,
+				5C94F52B228DA61B00FAE07A /* MovieListViewController.swift */,
+				5C94F52C228DA61B00FAE07A /* MovieListScreen.swift */,
+				5C94F52D228DA61B00FAE07A /* MovieListView.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -109,7 +125,6 @@
 			children = (
 				5C94F515228DA33A00FAE07A /* MovieDB.xcdatamodeld */,
 				5C94F51A228DA33C00FAE07A /* LaunchScreen.storyboard */,
-				5C94F512228DA33A00FAE07A /* Main.storyboard */,
 				5C94F51D228DA33C00FAE07A /* Info.plist */,
 				5C94F518228DA33C00FAE07A /* Assets.xcassets */,
 			);
@@ -185,7 +200,7 @@
 			files = (
 				5C94F51C228DA33C00FAE07A /* LaunchScreen.storyboard in Resources */,
 				5C94F519228DA33C00FAE07A /* Assets.xcassets in Resources */,
-				5C94F514228DA33A00FAE07A /* Main.storyboard in Resources */,
+				5C94F52E228DA61B00FAE07A /* MovieList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,23 +253,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C94F534228DA6BF00FAE07A /* AppRouter.swift in Sources */,
 				5C94F511228DA33A00FAE07A /* ViewController.swift in Sources */,
+				5C94F532228DA61B00FAE07A /* MovieListView.swift in Sources */,
+				5C94F530228DA61B00FAE07A /* MovieListViewController.swift in Sources */,
+				5C94F531228DA61B00FAE07A /* MovieListScreen.swift in Sources */,
 				5C94F517228DA33A00FAE07A /* MovieDB.xcdatamodeld in Sources */,
 				5C94F50F228DA33A00FAE07A /* AppDelegate.swift in Sources */,
+				5C94F52F228DA61B00FAE07A /* MovieListPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5C94F512228DA33A00FAE07A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5C94F513228DA33A00FAE07A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5C94F51A228DA33C00FAE07A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

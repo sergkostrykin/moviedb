@@ -12,10 +12,15 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+    /// The main window.
+    var window: UIWindow? = UIWindow(frame: UIScreen.main.bounds)
 
+    var router: AppRouter?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        window?.backgroundColor = .white
+        window?.makeKeyAndVisible()
+
         // Override point for customization after application launch.
         return true
     }
