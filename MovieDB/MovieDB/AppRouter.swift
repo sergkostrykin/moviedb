@@ -27,6 +27,7 @@ class AppRouter: NSObject {
     
     private func showAppropriateView() {
         let navigation = UINavigationController(rootViewController: UIViewController())
+        navigation.setNavigationBarHidden(true, animated: false)
         MovieListScreen().push(to: navigation, animated: false)
         animateTransition(to: navigation)
     }
@@ -45,7 +46,7 @@ class AppRouter: NSObject {
     
     private func setupAppearance() {
         let backButtonImage: UIImage? = {
-            let backIcon = UIImage(named: "buttonBack")!
+            let backIcon = UIImage(named: "back")!
             let leftOffset: CGFloat = 8.0
             let size = CGSize(width: backIcon.size.width + leftOffset, height: backIcon.size.height + 15)
             UIGraphicsBeginImageContextWithOptions(size, false, 0)

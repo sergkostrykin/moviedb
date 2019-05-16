@@ -22,12 +22,20 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96I-a4-jfb">
+                                <rect key="frame" x="166.5" y="323" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="96I-a4-jfb" firstAttribute="centerY" secondItem="T3Y-us-3aW" secondAttribute="centerY" id="cE2-C3-if2"/>
                             <constraint firstAttribute="bottom" secondItem="voL-fJ-qfF" secondAttribute="bottom" id="cN8-Yz-Ypb"/>
                             <constraint firstAttribute="trailing" secondItem="voL-fJ-qfF" secondAttribute="trailing" id="fo4-ZA-nhN"/>
                             <constraint firstItem="voL-fJ-qfF" firstAttribute="top" secondItem="T3Y-us-3aW" secondAttribute="top" id="iGN-0O-Wy7"/>
+                            <constraint firstItem="96I-a4-jfb" firstAttribute="centerX" secondItem="T3Y-us-3aW" secondAttribute="centerX" id="pZn-BD-fD8"/>
                             <constraint firstItem="voL-fJ-qfF" firstAttribute="leading" secondItem="T3Y-us-3aW" secondAttribute="leading" id="ubm-5J-3dY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Mxc-NT-iqm"/>
