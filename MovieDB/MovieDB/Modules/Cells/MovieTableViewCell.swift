@@ -27,7 +27,14 @@ class MovieTableViewCell: UITableViewCell {
     func setup(movie: Movie?, isSeparatorHidden: Bool = false) {
         
         movieTitleLabel.text = movie?.title
-        movieImageView.kf.setImage(with: movie?.posterPath?.asURL, placeholder: UIImage(named: "placeholder"))
+        let placeholder = UIImage(named: "placeholder")
+        if let urlString = movie?.posterPath {
+            let url = "\(Environment.imageUrl)\(urlString)"
+            movieImageView.kf.setImage(with: url.asURL, placeholder: placeholder)
+        } else {
+            movieImageView.image = placeholder
+        }
+        
         ratingView.rating = movie?.voteAverage ?? 0
         let releaseDate = movie?.releaseDate?.apiDate?.releaseDateString ?? ""
         releaseLabel.text = "In theatres \(releaseDate)"

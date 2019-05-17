@@ -15,5 +15,7 @@ struct Constants {
 
 struct Environment {
     static let baseUrl: String = "http://api.themoviedb.org/3"
+    static let imageUrl: String = "https://image.tmdb.org/t/p/w500" //    https://image.tmdb.org/t/p/w500/kqjL17yufvn9OVLyXYpvtyrFfak.jpg
+
 }
 
