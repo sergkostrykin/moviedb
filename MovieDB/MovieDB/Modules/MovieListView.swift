@@ -8,4 +8,9 @@
 
 protocol MovieListView: class {
 
+    func showSpinner()
+    func dismissSpinner()
+    func showAlert(title: String?, message: String?)
+    func refresh(movies: [Movie])
+
 }

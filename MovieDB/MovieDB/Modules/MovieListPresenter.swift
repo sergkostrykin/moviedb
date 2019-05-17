@@ -20,33 +20,23 @@ final class MovieListPresenter {
     
     
     func loadMovies() {
-//        view?.showSpinner()
+        view?.showSpinner()
         MovieService.topRated() { [weak self] (result, error) in
             DispatchQueue.main.async {
-//                self?.view?.dismissSpinner()
+                self?.view?.dismissSpinner()
                 if let error = error {
-//                    let action = UIAlertAction(title: R.string.localizable.alert_dialog_ok(), style: .default, handler: { (_) in
-//                        self?.router?.back()
-//                    })
-//                    self?.view?.showAlert(title: nil, message: String().localizable?.errorLoadingDataText, actions: [action])
+                    self?.view?.showAlert(title: "Error", message: error.localizedDescription)
                     return
                 }
                 
                 guard let movies = result?.results else {
-//                    let action = UIAlertAction(title: R.string.localizable.alert_dialog_ok(), style: .default, handler: { (_) in
-//                        self?.router?.back()
-//                    })
-//                    self?.view?.showAlert(title: nil, message: String().localizable?.noProductsFound, actions: [action])
+                    self?.view?.showAlert(title: "Error", message: "No movies found")
                     return
                 }
-//                self?.refreshProduct(product)
-//                self?.loadRelatedProducts(related: product.related)
+                self?.view?.refresh(movies: movies)
             }
         }
     }
-
-    
-    
 }
 
 extension MovieListPresenter: MovieListViewOutput {
