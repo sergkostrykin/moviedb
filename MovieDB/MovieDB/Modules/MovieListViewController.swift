@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cosmos
 
 final class MovieListViewController: UIViewController {
     
@@ -46,7 +47,7 @@ extension MovieListViewController: MovieListView {
 extension MovieListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 120
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

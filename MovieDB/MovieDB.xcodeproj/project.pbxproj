@@ -27,6 +27,9 @@
 		5C94F547228EB0EB00FAE07A /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94F546228EB0EB00FAE07A /* UITableViewExtension.swift */; };
 		5C94F54A228EB2B600FAE07A /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94F548228EB2B600FAE07A /* MovieTableViewCell.swift */; };
 		5C94F54B228EB2B600FAE07A /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C94F549228EB2B600FAE07A /* MovieTableViewCell.xib */; };
+		5C94F54D228F27B900FAE07A /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94F54C228F27B900FAE07A /* UIViewControllerExtensions.swift */; };
+		5C94F54F228F283B00FAE07A /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94F54E228F283B00FAE07A /* StringExtension.swift */; };
+		5C94F551228F2C4700FAE07A /* DateTimeTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94F550228F2C4700FAE07A /* DateTimeTools.swift */; };
 		7E8160732B82130541F7822C /* Pods_MovieDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EF5F6F0069BBC5F72B581C3 /* Pods_MovieDB.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +58,9 @@
 		5C94F546228EB0EB00FAE07A /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		5C94F548228EB2B600FAE07A /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		5C94F549228EB2B600FAE07A /* MovieTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
+		5C94F54C228F27B900FAE07A /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		5C94F54E228F283B00FAE07A /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		5C94F550228F2C4700FAE07A /* DateTimeTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTimeTools.swift; sourceTree = "<group>"; };
 		E0EC1FBD4EE0A78709015A2A /* Pods-MovieDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDB.release.xcconfig"; path = "Target Support Files/Pods-MovieDB/Pods-MovieDB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -182,6 +188,9 @@
 		5C94F53B228DBCD100FAE07A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5C94F550228F2C4700FAE07A /* DateTimeTools.swift */,
+				5C94F54E228F283B00FAE07A /* StringExtension.swift */,
+				5C94F54C228F27B900FAE07A /* UIViewControllerExtensions.swift */,
 				5C94F546228EB0EB00FAE07A /* UITableViewExtension.swift */,
 				5C94F53D228DBCF700FAE07A /* NSErrorExtension.swift */,
 			);
@@ -314,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C94F544228DC0D900FAE07A /* Movie.swift in Sources */,
+				5C94F54D228F27B900FAE07A /* UIViewControllerExtensions.swift in Sources */,
 				5C94F534228DA6BF00FAE07A /* AppRouter.swift in Sources */,
 				5C94F511228DA33A00FAE07A /* ViewController.swift in Sources */,
 				5C94F532228DA61B00FAE07A /* MovieListView.swift in Sources */,
@@ -323,9 +333,11 @@
 				5C94F547228EB0EB00FAE07A /* UITableViewExtension.swift in Sources */,
 				5C94F517228DA33A00FAE07A /* MovieDB.xcdatamodeld in Sources */,
 				5C94F540228DBEDC00FAE07A /* MovieService.swift in Sources */,
+				5C94F551228F2C4700FAE07A /* DateTimeTools.swift in Sources */,
 				5C94F50F228DA33A00FAE07A /* AppDelegate.swift in Sources */,
 				5C94F53E228DBCF700FAE07A /* NSErrorExtension.swift in Sources */,
 				5C94F53A228DBCA100FAE07A /* Connection.swift in Sources */,
+				5C94F54F228F283B00FAE07A /* StringExtension.swift in Sources */,
 				5C94F542228DC09700FAE07A /* MovieList.swift in Sources */,
 				5C94F52F228DA61B00FAE07A /* MovieListPresenter.swift in Sources */,
 				5C94F536228DBB7800FAE07A /* Constants.swift in Sources */,

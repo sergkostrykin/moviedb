@@ -9,4 +9,6 @@ pod 'Alamofire'
 pod ‘MagicalRecord’
 pod 'Kingfisher'
 pod 'SVProgressHUD'
+pod 'Cosmos', '~> 18.0'
+
 end
