@@ -9,7 +9,7 @@
 import UIKit
 
 protocol MovieDetailsRouter {
-    
+    func routeBack()
 }
 
 final class MovieDetailsScreen {
@@ -42,4 +42,7 @@ final class MovieDetailsScreen {
 
 extension MovieDetailsScreen: MovieDetailsRouter {
     
+    func routeBack() {
+        viewController?.navigationController?.popViewController(animated: true)
+    }
 }

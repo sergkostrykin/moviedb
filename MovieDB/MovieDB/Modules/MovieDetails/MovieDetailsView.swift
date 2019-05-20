@@ -7,5 +7,12 @@
 //
 
 protocol MovieDetailsView: class {
+    
+    func refresh(movie: Movie?)
+    
+    func showAlert(title: String?, message: String?)
 
+    func showSpinner()
+
+    func dismissSpinner()
 }

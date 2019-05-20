@@ -10,6 +10,7 @@ import Foundation
 
 protocol MovieDetailsViewOutput: class {
     func didLoad()
+    func back()
 }
 
 final class MovieDetailsPresenter {
@@ -26,22 +27,20 @@ final class MovieDetailsPresenter {
 
     func loadMovieDetails() {
         guard let id = movie?.id else { return }
-//        view?.showSpinner()
+        view?.showSpinner()
         MovieService.movieDetails(id: id) { [weak self] (result, error) in
             DispatchQueue.main.async {
-//                self?.view?.dismissSpinner()
+                self?.view?.dismissSpinner()
                 if let error = error {
-//                    self?.view?.showAlert(title: "Error", message: error.localizedDescription)
+                    self?.view?.showAlert(title: "Error", message: error.localizedDescription)
                     return
                 }
                 
                 guard let movie = result else {
-//                    self?.view?.showAlert(title: "Error", message: "No movies found")
+                    self?.view?.showAlert(title: "Error", message: "No movie found")
                     return
                 }
-                print("\(movie)")
-
-//                self?.view?.refresh(movies: movies)
+                self?.view?.refresh(movie: movie)
             }
         }
     }
@@ -52,6 +51,10 @@ extension MovieDetailsPresenter: MovieDetailsViewOutput {
     func didLoad() {
         print(#function)
         loadMovieDetails()
+    }
+    
+    func back() {
+        router?.routeBack()
     }
 }
 
