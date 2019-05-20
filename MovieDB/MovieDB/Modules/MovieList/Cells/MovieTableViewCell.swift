@@ -17,12 +17,11 @@ class MovieTableViewCell: UITableViewCell {
     @IBOutlet private var releaseLabel: UILabel!
     @IBOutlet private var separator: UIView!
     @IBOutlet private var ratingView: CosmosView!
+    @IBOutlet private var likedLabel: UILabel!
+    @IBOutlet private var descriptionLabel: UILabel!
+    @IBOutlet private var likedLabelViewLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet private var likedLabelRatingLeadingConstraint: NSLayoutConstraint!
     
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
     
     func setup(movie: Movie?, isSeparatorHidden: Bool = false) {
         
@@ -34,14 +33,22 @@ class MovieTableViewCell: UITableViewCell {
         } else {
             movieImageView.image = placeholder
         }
+        let popularity = movie?.popularity ?? 0.0
+        let voteAverage = movie?.voteAverage ?? 0.0
+        if voteAverage == 0.0 {
+            ratingView.isHidden = true
+            likedLabelViewLeadingConstraint.isActive = true
+            likedLabel.text = "\(Int(popularity))% liked this movie"
+        } else {
+            ratingView.isHidden = false
+            likedLabelViewLeadingConstraint.isActive = false
+            likedLabel.text = "\(voteAverage) | \(Int(popularity))% liked this movie"
+        }
         
-        ratingView.rating = movie?.voteAverage ?? 0
+        likedLabelRatingLeadingConstraint.isActive = !likedLabelViewLeadingConstraint.isActive
         let releaseDate = movie?.releaseDate?.apiDate?.releaseDateString ?? ""
         releaseLabel.text = "In theatres \(releaseDate)"
+        descriptionLabel.text = movie?.overview
         separator.isHidden = isSeparatorHidden
-        
     }
-
-
-    
 }

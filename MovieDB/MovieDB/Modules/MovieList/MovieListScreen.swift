@@ -9,7 +9,7 @@
 import UIKit
 
 protocol MovieListRouter {
-    
+    func showMovieDetails(movie: Movie)
 }
 
 final class MovieListScreen {
@@ -37,4 +37,8 @@ final class MovieListScreen {
 
 extension MovieListScreen: MovieListRouter {
     
+    func showMovieDetails(movie: Movie) {
+        MovieDetailsScreen(movie: movie).push(to: viewController?.navigationController)
+    }
+
 }

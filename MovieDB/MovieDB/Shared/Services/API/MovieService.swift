@@ -25,9 +25,9 @@ class MovieService {
             
             do {
                 let jsonData = try JSONSerialization.data(withJSONObject: json ?? [:], options: .prettyPrinted)
-                let config = try JSONDecoder().decode(MovieList?.self, from: jsonData)
+                let movies = try JSONDecoder().decode(MovieList?.self, from: jsonData)
                 DispatchQueue.main.async {
-                    completion?(config, nil)
+                    completion?(movies, nil)
                 }
             } catch {
                 DispatchQueue.main.async {
@@ -37,4 +37,30 @@ class MovieService {
             }
         }
     }
+    
+    class func movieDetails(id: Int, completion: ((Movie?, Error?) -> Void)?) {
+        let path = Environment.baseUrl + "/movie/\(id)"
+        Connection.startTask(for: path) { json, _, error in
+            if let error = error {
+                DispatchQueue.main.async {
+                    completion?(nil, error)
+                }
+                return
+            }
+            
+            do {
+                let jsonData = try JSONSerialization.data(withJSONObject: json ?? [:], options: .prettyPrinted)
+                let movie = try JSONDecoder().decode(Movie?.self, from: jsonData)
+                DispatchQueue.main.async {
+                    completion?(movie, nil)
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion?(nil, error)
+                }
+                print(error)
+            }
+        }
+    }
+
 }

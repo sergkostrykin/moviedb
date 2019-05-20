@@ -10,6 +10,7 @@ import Foundation
 
 protocol MovieListViewOutput: class {
     func didLoad()
+    func showMovieDetails(movie: Movie)
 }
 
 final class MovieListPresenter {
@@ -42,6 +43,10 @@ final class MovieListPresenter {
 extension MovieListPresenter: MovieListViewOutput {
     func didLoad() {
         loadMovies()
+    }
+    
+    func showMovieDetails(movie: Movie) {
+        router?.showMovieDetails(movie: movie)
     }
 }
 
